@@ -26,7 +26,7 @@ export class Register extends Component {
                <input type="password" id="pass-repeat" placeholder="Repetir Contraseña" name=""></input>
             </div>
             <div >
-                <button id="create" className="sign-in-style">Crear cuenta</button>
+                <button className="btn btn-primary">Crear cuenta</button>
             </div>
             </div>
         )

@@ -1,40 +1,58 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Login.css';
 import Logo from './../img/Logo.png';
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
-function Login (props){
-const {history} = props;
-    
+class Login extends Component{
+    state= {
+        email: "",
+        password: ""
+    }
+    handleChange = (e) =>{
+        this.setState({
+            [e.target.id]: e.target.value
+
+        })
+    }
+    handleSubmit = (e) =>{
+        console.log(this.state)
+        e.preventDefault();
+
+    }
+
+    render (){
         return (
             <div className='back' id="">
                 <img src={Logo} id="logo" alt="logo-allergy"></img>
-                <div className="cfield">
-                <i className="fas fa-user-alt"></i>
-                    <input type="email" id="email-sign-in"  placeholder="Correo" name=""></input>
-                </div>
-                <div className="cfield">
-                    <i className="fas fa-key"></i>
-                <input className="password" id="password-sign-in" placeholder="Contraseña" name=""></input>
-                </div>
-                <div>
-                    <button id="sign-in" className="sign-in-style" >Iniciar Sesión</button>
-                </div>
+                <form onSubmit={this.handleSubmit}>
+                    <div className="cfield">
+                    <i className="fas fa-user-alt"></i>
+                        <input type="email" id="email" onChange={this.handleChange} placeholder="Correo" name=""></input>
+                    </div>
+                    <div className="cfield">
+                        <i className="fas fa-key"></i>
+                    <input className="password" type="password" id="password" onChange={this.handleChange} placeholder="Contraseña" name=""></input>
+                    </div>
+                    <div >
+                        <button className="btn btn-primary" >Iniciar Sesión</button>
+                    </div>
+                </form>
                 <div id="forgot-container">
-                    <a href="#/forgot">¿Olvidaste tu contraseña?</a>
+                    <Link to="/forgot">¿Olvidaste tu contraseña?</Link>
                 </div>
                     <div>
                 <div>
-                    <a href="#/login" id="login" className="sign-in-google"> <i className="fab fa-google"></i>&nbsp;Login Google</a>
+                    <Link to="/login"> <i className="fab fa-google"></i>&nbsp;Login Google</Link>
                 </div>
                 <div>
-                    <p id="register">¿No tienes una cuenta? &nbsp;<a onClick={()=>{history.push("./Register")}}>Regístrate Aquí</a></p>
+                    <p id="register">¿No tienes una cuenta? <Link to="/Register">Regístrate Aquí</Link></p>
                 </div>
                 </div>
             </div>
         )
     }
+}
 
 
-export default withRouter(Login);
+export default Login;

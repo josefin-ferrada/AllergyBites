@@ -3,6 +3,52 @@
     width: 220px;
 }
 .back{
-    text-align: center;
+    text-align: left;
     padding: 10%
 }
+.cfield {
+    float: left;
+    width: 80%;
+    position: center;
+    margin-left: 30px;
+    margin-bottom: 19px;
+    border-bottom: 1px solid black;
+    padding-top: 5%;
+    margin-top: 5%;
+  }
+  input {
+    width: 150px;
+    height: 20px;
+    border:none;
+  }
+  input:focus {
+    outline: none !important;
+  }
+  .timeline, .like, .newRecipe, .user, .home {
+    margin: 20px;
+    width: 40px;
+  }
+  .options, footer, .sign-in-google, .sign-in-style {
+
+    background-color:  rgba(250, 161, 59, 0.884);
+
+  }
+  footer{
+    margin-top: 370px;
+  }
+  .grid-one {
+    box-shadow: 0 0 15px rgba(0,0,0,.5);
+    width: 150px;
+    height: 350px;
+    margin: 5px;
+    float: left;
+    padding: 10px;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 0px; 
+    margin-left: 0px;
+    
+  }
