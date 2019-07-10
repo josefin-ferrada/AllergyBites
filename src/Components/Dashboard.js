@@ -36,7 +36,7 @@ class Dashboard extends Component {
                 <footer>
                     <Link to="/timeline"><img className="timeline" src={home}  alt="timeline"></img></Link>
                     <Link to="/likes"><img className="like" src={like}  alt="like"></img></Link>
-                    <Link to="/newrecipe"><img className="newRecipe" src={add}  alt="newRecipe"></img></Link>
+                    <Link to="/createRecipe"><img className="newRecipe" src={add}  alt="newRecipe"></img></Link>
                     <Link to="/profile"><img className="user" src={user}  alt="user"></img></Link>
                 </footer>
             </React.Fragment>

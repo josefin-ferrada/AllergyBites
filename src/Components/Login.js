@@ -35,7 +35,7 @@ class Login extends Component{
                     <input className="password" type="password" id="password" onChange={this.handleChange} placeholder="Contraseña" name=""></input>
                     </div>
                     <div >
-                        <button className="btn btn-primary" >Iniciar Sesión</button>
+                        <Link to="/Dashboard" style={{color: "white"}}><button className="btn btn-primary" >Iniciar Sesión</button></Link>
                     </div>
                 </form>
                 <div id="forgot-container">
